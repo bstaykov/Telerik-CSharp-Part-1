@@ -1,0 +1,201 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Operators
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //string a = "abc", b = "bcd";
+            //StringBuilder builder = new StringBuilder();
+            //builder.Append(a).Append(b).Append(a).Append(b);
+            //Console.WriteLine(builder);
+
+            //double incorect = (double)((1 + 2) / 4);
+            //Console.WriteLine("incorect = " + incorect);
+            //int check = 3 / 4;
+            //Console.WriteLine("check = " + check);
+
+            ////zad1 
+
+            //int x = 4;
+            //if (x % 2 == 0)
+            //{
+            //    Console.WriteLine("EVEN");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("ODD");
+            //}
+
+            //// zad2
+
+            //for (int i = 0; i < 200; i++)
+            //{
+            //    if (i % 5 == 0 && i % 7 == 0)
+            //    {
+            //        Console.WriteLine("i = " + i);
+            //    }
+
+            //}
+
+            // zad3
+            //Console.WriteLine("Въвведете число: ");
+            //int x = int.Parse(Console.ReadLine());
+
+            //if ((Math.Abs(x) / 100) % 10 == 7)
+            //{
+            //    Console.WriteLine("x = " + x);
+            //    Console.WriteLine("third digit of 'x'(right-to-left) is 7");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("x = " + x);
+            //    Console.WriteLine("third digit of 'x'(right-to-left) is " + ((Math.Abs(x) / 100) % 10));
+            //}
+            //Console.Write("Въвведете число: ");
+            //int x = int.Parse(Console.ReadLine());
+            //x = Math.Abs(x);
+            ////Console.WriteLine(x);
+
+            //x = x % 1000;
+            ////Console.WriteLine(x);
+            //x = x / 100;
+
+            //if (x == 7)
+            //{
+            //    Console.WriteLine(x);
+            //}
+
+            // // zad4
+
+            // string str = Console.ReadLine();
+            // int number = int.Parse(str);
+            // int p = 3;
+            // int mask = 1 << p;
+            // int nAndMask = number & mask;
+            // int bit = nAndMask >> p;
+            // Console.WriteLine("Third bit is " + bit);
+
+            ////  x 0000 1100
+            ////  1 0000 0001
+            //// << 0000 1000
+            ////  & 0000 1000
+            //// >> 0000 0001
+
+            ////zad5
+
+            //    int a = 5, b = 4, c = 7;
+            //    double area = (((double)(a + b)) / 2)*c;
+            //    Console.WriteLine(area);
+
+            //// zad6
+
+            //int x = 5, y = 6;
+            //Console.WriteLine("Периметър = " + 2 * (x + y));
+            //Console.WriteLine("Лице = " + x * y);
+
+            //// zad7 
+
+            //Console.WriteLine("Въведете тегло: ");
+            //int weight = Convert.ToInt32(Console.ReadLine());
+            //double weightOnMoon = (double)weight * 0.17;
+            //Console.WriteLine(weightOnMoon);
+            
+            // zad9
+            //Console.WriteLine("Въведете x: ");
+            //int x = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Въведете y: ");
+            //int y = int.Parse(Console.ReadLine());
+
+            //if (Math.Sqrt(x * x + y * y) <= 5)
+            //{
+            //    if (x >= -1 && y >= 1)
+            //    {
+            //        Console.WriteLine("Точката (" + x + ", " + y + ") е вътре в окръжноста и във правоъгълника.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Точката (" + x + ", " + y + ") е вътре в окръжноста но извън правоъгълника.");
+            //    }
+
+            //}
+
+            //// zad{0}{1}
+
+            //int a = 5, b = 6, c = 10, d = 8;
+
+            //Console.WriteLine("Five {0} Six {1} Ten {2} Eight {3}" , a , b , c , d);
+
+
+
+
+            //zad bit switch
+
+            //int number = int.Parse(Console.ReadLine());
+            //Console.WriteLine(Convert.ToString(number, 2).PadLeft(32, '0'));
+
+            //int mask = 1 << 3;
+            //int thirdBit = (number & mask) >> 3;
+
+            //mask = 1 << 24;
+            //int twentyFourthBit = (number & mask) >> 24;
+
+            //if (thirdBit == twentyFourthBit)
+            //{
+            //    Console.WriteLine(number);
+            //    return;
+            //}
+
+            //if (thirdBit == 0)
+            //{
+            //    //put 0 in 24th position
+            //    mask = ~(1 << 24);
+            //    number = number & mask;
+            //}
+            //else if (thirdBit == 1)
+            //{
+            //    //put 1 in 24th position
+            //    mask = 1 << 24;
+            //    number = number | mask;
+            //}
+
+            //if (twentyFourthBit == 0)
+            //{
+            //    //put 0 in third position
+            //    mask = ~(1 << 3);
+            //    number = number & mask;
+            //}
+            //else if (twentyFourthBit == 1)
+            //{
+            //    //put 1 in third position
+            //    mask = 1 << 3;
+            //    number = number | mask;
+            //}
+
+            //Console.WriteLine(Convert.ToString(number, 2).PadLeft(32, '0'));
+        
+
+            ////
+            //int? x = null;
+            //int y = x ?? 5;
+
+            //Console.WriteLine(y);
+            //Console.WriteLine(x);
+            //string strPesho = "Pesho";
+            //string finalStr = strPesho ?? "[Empty]";
+            //Console.WriteLine(finalStr);
+
+            int numberOfClients = 10;
+            object numberOfThings = numberOfClients;
+            double sellingPrice = (double)numberOfThings;
+            Console.WriteLine(sellingPrice);
+        }
+
+    }
+}
