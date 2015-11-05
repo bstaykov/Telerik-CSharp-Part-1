@@ -6,7 +6,7 @@
     public static class RandomGenerator
     {
         private static Random random = new Random();
-        private static string chars = "abc";
+        private static string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
         public static string Chars
         {
@@ -58,6 +58,12 @@
             return rounded;
         }
 
+        /// <summary>
+        /// StringBuilder implementation
+        /// </summary>
+        /// <param name="minLength"></param>
+        /// <param name="maxLength"></param>
+        /// <returns></returns>
         public static string GenerateRandomWord(int minLength = 1, int maxLength = 10)
         {
             if (minLength > maxLength || minLength < 0 || maxLength < 1 || maxLength == int.MaxValue) 
@@ -78,16 +84,21 @@
             return wordStringBuilder.ToString();
         }
 
+        /// <summary>
+        /// Char[] implementation
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
         public static string GetRandomString(int length)
         {
-            var chars = new char[length];
+            var charsGenerated = new char[length];
 
             for (int i = 0; i < length; i++)
             {
-                chars[i] = Chars[random.Next(0, Chars.Length)];
+                charsGenerated[i] = Chars[random.Next(0, Chars.Length)];
             }
 
-            return new string(chars);
+            return new string(charsGenerated);
         }
 
         /// <summary>
